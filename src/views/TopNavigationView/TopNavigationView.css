@@ -1,0 +1,13 @@
+nav .navigation-button {
+  align-items: center;
+  font-size: 24px;
+  display: flex;
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  nav .navigation-button .bar-title {
+    height: 50px;
+    min-width: 40px;
+  }
+}
