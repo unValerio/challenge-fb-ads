@@ -8,7 +8,7 @@ function NavigationView() {
       <li>
         <Link className="internal-link" to="/">
           <i className='bx bx-list-ul'></i>
-          <span className="link-title">List of products</span>
+          <span className="link-title">Product list</span>
         </Link>
         <Link className="internal-link" to="/products/234">
           <i className='bx bx-list-ul'></i>

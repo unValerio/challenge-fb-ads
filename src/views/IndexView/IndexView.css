@@ -1,0 +1,97 @@
+.box-wrapper {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.box-container {
+  width: 100%;
+  background: #fff;
+  padding: 20px 30px;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+  margin: 0 20px 0 0;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.box-container .box-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.box-content .indicator {
+  margin-left: 20px;
+  display: inline-block;
+  align-items: center;
+  top: -6px;
+  position: relative;
+}
+
+.box-content .indicator .ads-counter {
+  height: 23px;
+  width: 23px;
+  background: #8FDACB;
+  line-height: 23px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 16px;
+  margin-right: 7px;
+  display: inline-block;
+}
+
+.box-content .indicator .text {
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.box-container .box-content .box-column {
+  display: table-cell;
+}
+
+.box-container .box-content .box-right-column {
+  padding: 0 0 0 30px;
+}
+
+.box-container .box-content .box-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.box-container .box-content .box-name {
+  font-size: 30px;
+  font-weight: 400;
+  color: #333;
+}
+
+.box-container .box-content .box-price {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  margin: 10px 0;
+}
+
+.box-container .box-content .box-description {
+  font-size: 18px;
+  color: #333;
+}
+
+@media only screen and (max-width: 600px) {
+  .box-container .box-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .box-container .box-content .box-right-column {
+    padding: 0;
+  }
+
+  .box-content .indicator {
+    margin-left: 0;
+    display: inline-block;
+    align-items: center;
+    top: 0;
+    position: relative;
+  }
+}
