@@ -1,8 +1,10 @@
 .button {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
   cursor: pointer;
+  display: contents;
+}
+
+.button i {
+  margin-right: 6px;
 }
 
 .button span {

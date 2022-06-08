@@ -1,13 +1,8 @@
 import { Link } from 'react-router-dom';
 
 import useStore from '../../store/useStore';
-import { formatPrice } from '../../utils/helpers';
+import { formatPrice, countAdsFromProductId } from '../../utils/helpers';
 import './IndexView.css';
-
-const countAdsFromProductId = (ads, productId) => {
-  const productAds = ads.filter((ad) => ad.productId === productId);
-  return productAds.length;
-};
 
 function IndexView() {
   const { store } = useStore();

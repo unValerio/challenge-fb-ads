@@ -1,45 +1,22 @@
 import Reflux from 'reflux';
 
-import products from './products.json';
+import data from './data.json';
 
-import { incrementAction } from './actions';
+import { createNewAd } from './actions';
 
 class Store extends Reflux.Store {
   constructor() {
     super();
-    this.state = {
-      products,
-      ads: [
-        {
-          id: "asdf",
-          productId: "002",
-          headline: "Headline",
-          description: "Description",
-          callToAction: "Download",
-        },
-        {
-          id: "zxcv",
-          productId: "002",
-          headline: "Headline2",
-          description: "Description2",
-          callToAction: "Download2",
-        },
-        {
-          id: "hgf",
-          productId: "003",
-          headline: "Headline3",
-          description: "Description3",
-          callToAction: "Download3",
-        }
-      ]
-    };
+    this.state = data;
 
-    this.listenTo(incrementAction, this.incrementItUp);
+    this.listenTo(createNewAd, this.createNewAd);
   }
 
-  incrementItUp() {
-    var newCount = this.state.count + 1;
-    this.setState({ count: newCount });
+  createNewAd(newAd) {
+    this.setState({
+      ...this.state,
+      ads: this.state.ads.concat(newAd),
+    });
   }
 }
 
