@@ -8,7 +8,7 @@
   list-style: none;
 }
 
-.nav-links li a {
+.nav-links li .internal-link {
   text-decoration: none;
   height: 100%;
   width: 100%;
@@ -17,11 +17,11 @@
   transition: all 0.4s ease;
 }
 
-.nav-links li a.active {
+.nav-links li .internal-link.active {
   background: #3514B0;
 }
 
-.nav-links li a:hover {
+.nav-links li .internal-link:hover {
   background: #3514B0;
 }
 
@@ -32,7 +32,7 @@
   color: #fff;
 }
 
-.nav-links li a .link-title {
+.nav-links li .internal-link .link-title {
   font-weight: 400;
   color: #fff;
   font-size: 15px;

@@ -56,11 +56,6 @@
   transition: all 0.5s ease;
 }
 
-.main-section .main-content {
-  position: relative;
-  padding-top: 104px;
-}
-
 @media (max-width: 1240px) {
   .sidebar {
     width: 60px;
