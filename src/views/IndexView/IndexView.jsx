@@ -1,14 +1,20 @@
+import { Link } from 'react-router-dom';
+
+import useStore from '../../store/useStore';
+import { formatPrice } from '../../utils/helpers';
 import './IndexView.css';
 
-import { formatPrice } from '../../utils/helpers';
-
-// TODO: Get products from store when API is available
-import products from './products.json';
+const countAdsFromProductId = (ads, productId) => {
+  const productAds = ads.filter((ad) => ad.productId === productId);
+  return productAds.length;
+};
 
 function IndexView() {
+  const { store } = useStore();
+  const { products, ads } = store;
+
   return (
     <div className="box-wrapper">
-
       {products.map((product) => (
         <div className='box-container' key={product.id}>
           <div className='box-content'>
@@ -16,13 +22,13 @@ function IndexView() {
               <img className='box-image' src={product.productImage} alt="" />
             </div>
             <div className='box-column box-right-column'>
-              <div className='box-name'>
+              <Link className="box-name" to={`/products/${product.id}`}>
                 {product.productName}
                 <div className="indicator">
-                  <span className='ads-counter'>4</span>
-                  <span className="text">Ads in total</span>
+                  <span className='ads-counter'>{countAdsFromProductId(ads, product.id)}</span>
+                  <span className="text">{countAdsFromProductId(ads, product.id) === 1 ? 'Ad' : 'Ads'}</span>
                 </div>
-              </div>
+              </Link>
               <div className='box-price'>Price: {formatPrice(product.price)}</div>
               <span className='box-description'>{product.productDescription}</span>
             </div>

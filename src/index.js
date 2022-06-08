@@ -6,10 +6,6 @@ import RootView from './views/RootView';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <RootView />
-  </React.StrictMode>
-);
+root.render(<RootView />);
 
 reportWebVitals();

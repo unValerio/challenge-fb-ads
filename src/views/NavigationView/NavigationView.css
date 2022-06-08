@@ -1,3 +1,36 @@
+.sidebar {
+  height: 100%;
+  width: 240px;
+  position: fixed;
+  background: #290e8b;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active {
+  width: 60px;
+}
+
+.sidebar .logo-container {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .logo-container i {
+  font-size: 28px;
+  font-weight: 500;
+  color: #fff;
+  min-width: 60px;
+  text-align: center;
+}
+
+.sidebar .logo-container .page-name {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
 .nav-links {
   margin-top: 10px;
 }
@@ -37,4 +70,20 @@
   color: #fff;
   font-size: 15px;
   white-space: nowrap;
+}
+
+@media (max-width: 1240px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar.active {
+    width: 220px;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 0;
+  }
 }
