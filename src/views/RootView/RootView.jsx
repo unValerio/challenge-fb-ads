@@ -11,13 +11,7 @@ import './RootView.css';
 function RootView() {
   return (
     <BrowserRouter>
-      <div className="sidebar">
-        <div className="logo-container">
-          <i className='bx bx-cart'></i>
-          <span className="page-name">Sporting Goods</span>
-        </div>
-        <NavigationView />
-      </div>
+      <NavigationView />
       <section className="main-section">
         <Routes>
           <Route path="/" element={<Layout />} >

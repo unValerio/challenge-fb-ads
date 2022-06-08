@@ -63,6 +63,11 @@
   font-size: 30px;
   font-weight: 400;
   color: #333;
+  text-decoration: none;
+}
+
+.box-container .box-content .box-name:hover {
+  color: black;
 }
 
 .box-container .box-content .box-price {
@@ -89,7 +94,7 @@
 
   .box-content .indicator {
     margin-left: 0;
-    display: inline-block;
+    display: block;
     align-items: center;
     top: 0;
     position: relative;
