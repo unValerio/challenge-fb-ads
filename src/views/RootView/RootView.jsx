@@ -14,7 +14,7 @@ function RootView() {
       <div className="sidebar">
         <div className="logo-container">
           <i className='bx bx-cart'></i>
-          <span className="page-name">MyShop</span>
+          <span className="page-name">Sporting Goods</span>
         </div>
         <NavigationView />
       </div>
