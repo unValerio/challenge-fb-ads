@@ -31,6 +31,17 @@ function CreateView() {
           />
         </div>
         <div>
+          <label htmlFor="image">Image</label>
+          <input
+            type="text"
+            name="image"
+            id="image"
+            placeholder="image"
+            onChange={onChange}
+            required
+          />
+        </div>
+        <div>
           <label htmlFor="callToAction">Call to action</label>
           <input
             type="text"
