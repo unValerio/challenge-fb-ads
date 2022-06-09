@@ -1,15 +1,25 @@
-import Button from "../../components/Button";
+import Button from '../../components/Button';
 import { Link } from 'react-router-dom';
 
-import useReadView from "./useReadView";
+import DeleteView from '../DeleteView';
+import useReadView from './useReadView';
 import './ReadView.css';
 
 function ReadView() {
-  const { product, ads } = useReadView();
+  const {
+    product,
+    ads,
+    showModal,
+    adToDelete,
+    onDelete,
+    onClose,
+    onConfirm,
+  } = useReadView();
 
   return (
     <>
       <h1>Facebook Ads of {product.productName}</h1>
+
       <Link to={`/products/${product.id}/ads/create`}>
         <Button iconName="bx-plus" title="Create a new add" />
       </Link>
@@ -23,10 +33,17 @@ function ReadView() {
             <Link to={`/products/${product.id}/ads/${ad.id}`}>
               <Button iconName="bx-pencil" />
             </Link>&nbsp;
-            <Button iconName="bx-trash" />
+            <Button iconName="bx-trash" onClick={() => onDelete(ad.id)} />
           </div>
         ))}
       </div>
+
+      <DeleteView
+        onClose={onClose}
+        onConfirm={onConfirm}
+        showModal={showModal}
+        adToDelete={adToDelete}
+      />
     </>
   );
 }

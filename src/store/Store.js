@@ -2,7 +2,7 @@ import Reflux from 'reflux';
 
 import data from './data.json';
 
-import { createNewAd, updateAd } from './actions';
+import { createNewAd, updateAd, deleteAd } from './actions';
 
 class Store extends Reflux.Store {
   constructor() {
@@ -11,6 +11,7 @@ class Store extends Reflux.Store {
 
     this.listenTo(createNewAd, this.createNewAd);
     this.listenTo(updateAd, this.updateAd);
+    this.listenTo(deleteAd, this.deleteAd);
   }
 
   createNewAd(newAd) {
@@ -26,6 +27,15 @@ class Store extends Reflux.Store {
     this.setState({
       ...this.state,
       ads: ads.concat(ad),
+    });
+  }
+
+  deleteAd(adId) {
+    const ads = this.state.ads.filter((ad) => ad.id !== adId);
+
+    this.setState({
+      ...this.state,
+      ads,
     });
   }
 }
