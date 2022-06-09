@@ -34,7 +34,7 @@ function UpdateView() {
         <div>
           <label htmlFor="image">Image</label>
           <input
-            type="text"
+            type="url"
             name="image"
             id="image"
             placeholder="image"

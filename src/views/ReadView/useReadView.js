@@ -2,12 +2,14 @@ import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 import useStore from '../../store/useStore';
+import useNotifications from '../../notifications/useNotifications';
 import { getAdsFromProductId, getAdFromId, getProductFromProductId } from '../../utils/helpers';
 
 export default function useReadView() {
   const params = useParams();
   const navigate = useNavigate();
   const { store, actions } = useStore();
+  const { enqueueNotification } = useNotifications();
   const { products, ads } = store;
 
   const [showModal, setShowModal] = useState(false);
@@ -30,7 +32,7 @@ export default function useReadView() {
     setShowModal(false);
     actions.deleteAd(adToDelete.id);
     setAddToDelete(undefined);
-    alert('Ad successfully deleted');
+    enqueueNotification({ message: 'Ad successfully deleted' });
     navigate(`/`);
   }
 
