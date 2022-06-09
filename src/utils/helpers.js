@@ -19,3 +19,8 @@ export const getProductFromProductId = (products, productId) => {
   const product = products.find((product) => product.id === productId);
   return product;
 };
+
+export const getAdFromId = (ads, adId) => {
+  const ad = ads.find((ad) => ad.id === adId);
+  return ad;
+}
