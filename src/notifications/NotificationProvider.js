@@ -1,4 +1,4 @@
-import { createContext, useReducer, useCallback, useEffect } from "react";
+import { createContext, useReducer, useCallback } from "react";
 
 import { reducer, functions, initialState } from './store';
 import './notifications.css';
@@ -10,8 +10,8 @@ const NotificationProvider = ({ children }) => {
 
   const { enqueue, drop } = functions({ dispatch }, { defaultDisplayDuration: 2000 });
 
-  const enqueueNotification = useCallback(enqueue, []);
-  const dropNotification = useCallback(drop, []);
+  const enqueueNotification = useCallback(enqueue, [enqueue]);
+  const dropNotification = useCallback(drop, [drop]);
 
   return (
     <NotificationContext.Provider value={{ enqueueNotification, dropNotification }}>
