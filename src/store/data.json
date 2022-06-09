@@ -24,28 +24,28 @@
   ],
   "ads": [
     {
-      "id": "asdf",
+      "id": "0001",
       "productId": "002",
-      "image": "http://1.jpg",
-      "headline": "Headline",
-      "description": "Description",
+      "image": "https://admockups.com/images/fb-admockups-single-ad-image.jpg",
+      "headline": "Try Ad Mockup Now! Its Free",
+      "description": "Ad Mockups lets you create fast and easy mock...",
       "callToAction": "Download"
     },
     {
-      "id": "zxcv",
+      "id": "0002",
       "productId": "002",
-      "image": "http://1.jpg",
-      "headline": "Headline2",
-      "description": "Description2",
-      "callToAction": "Download2"
+      "image": "https://admockups.com/images/fb-admockups-single-ad-image.jpg",
+      "headline": "Another Headline",
+      "description": "Minions ipsum gelatooo baboiii me want bananaaa!",
+      "callToAction": "Download"
     },
     {
-      "id": "hgf",
+      "id": "0003",
       "productId": "003",
-      "image": "http://1.jpg",
-      "headline": "Headline3",
-      "description": "Description3",
-      "callToAction": "Download3"
+      "image": "https://admockups.com/images/fb-admockups-single-ad-image.jpg",
+      "headline": "Minions Ipsum",
+      "description": "Minions ipsum aliquip butt consectetur.",
+      "callToAction": "Download"
     }
   ]
 }

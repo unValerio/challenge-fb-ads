@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 
 import useStore from '../../store/useStore';
 import { formatPrice, countAdsFromProductId } from '../../utils/helpers';
+import Box from '../../components/Box';
 import './IndexView.css';
 
 function IndexView() {
@@ -9,9 +10,9 @@ function IndexView() {
   const { products, ads } = store;
 
   return (
-    <div className="box-wrapper">
+    <>
       {products.map((product) => (
-        <div className='box-container' key={product.id}>
+        <Box key={product.id}>
           <div className='box-content'>
             <div className='box-column'>
               <img className='box-image' src={product.productImage} alt="" />
@@ -28,10 +29,9 @@ function IndexView() {
               <span className='box-description'>{product.productDescription}</span>
             </div>
           </div>
-        </div>
+        </Box>
       ))}
-
-    </div>
+    </>
   );
 }
 

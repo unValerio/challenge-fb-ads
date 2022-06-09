@@ -8,7 +8,9 @@ function Layout() {
     <>
       <TopBar />
       <div className="main-content">
-        <Outlet />
+        <div className="box-wrapper">
+          <Outlet />
+        </div>
       </div>
     </>
   );
