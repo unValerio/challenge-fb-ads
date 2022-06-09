@@ -1,24 +1,4 @@
-.box-wrapper {
-  width: 100%;
-  padding: 0 20px;
-}
-
-.box-container {
-  width: 100%;
-  background: #fff;
-  padding: 20px 30px;
-  box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
-  margin: 0 20px 0 0;
-  border-radius: 12px;
-  margin-bottom: 30px;
-}
-
-.box-container .box-content {
-  display: flex;
-  flex-direction: row;
-}
-
-.box-content .indicator {
+.indicator {
   margin-left: 20px;
   display: inline-block;
   align-items: center;
@@ -26,7 +6,7 @@
   position: relative;
 }
 
-.box-content .indicator .ads-counter {
+.indicator .ads-counter {
   height: 23px;
   width: 23px;
   background: #8FDACB;
@@ -39,64 +19,71 @@
   display: inline-block;
 }
 
-.box-content .indicator .text {
+.indicator .text {
   font-size: 15px;
   font-weight: 200;
 }
 
-.box-container .box-content .box-column {
+.box-column {
   display: table-cell;
 }
 
-.box-container .box-content .box-right-column {
+.box-right-column {
   padding: 0 0 0 30px;
 }
 
-.box-container .box-content .box-image {
+.box-image {
   width: 250px;
   height: 250px;
   border-radius: 20px;
   object-fit: cover;
 }
 
-.box-container .box-content .box-name {
+.box-name {
   font-size: 30px;
   font-weight: 400;
   color: #333;
   text-decoration: none;
 }
 
-.box-container .box-content .box-name:hover {
+.box-name:hover {
   color: black;
 }
 
-.box-container .box-content .box-price {
+.box-price {
   font-size: 20px;
   font-weight: 500;
   color: #333;
   margin: 10px 0;
 }
 
-.box-container .box-content .box-description {
+.box-description {
   font-size: 18px;
   color: #333;
 }
 
-@media only screen and (max-width: 600px) {
-  .box-container .box-content {
-    display: flex;
-    flex-direction: column;
-  }
+.box-content {
+  display: flex;
+  flex-direction: row;
+}
 
-  .box-container .box-content .box-right-column {
+@media only screen and (max-width: 600px) {
+  .box-right-column {
     padding: 0;
   }
 
-  .box-content .indicator {
+  .indicator {
     margin-left: 0;
     display: block;
     align-items: center;
     top: 0;
     position: relative;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .box-content {
+    display: flex;
+    flex-direction: column;
   }
 }
