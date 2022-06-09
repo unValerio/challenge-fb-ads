@@ -1,0 +1,23 @@
+.button {
+  cursor: pointer;
+  display: contents;
+}
+
+.button i {
+  margin-right: 6px;
+}
+
+.button span {
+  color: #fff;
+  background: #290e8b;
+  padding: 4px 12px;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.button span:hover {
+  background: #3514B0;
+}

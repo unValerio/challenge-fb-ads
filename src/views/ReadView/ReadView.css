@@ -1,0 +1,22 @@
+.title {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.new-ad {
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.headline-title {
+  margin-top: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .new-ad {
+    margin-left: 0;
+    margin-bottom: 20px;
+    ;
+    display: block;
+  }
+}

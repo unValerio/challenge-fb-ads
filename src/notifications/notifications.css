@@ -1,0 +1,45 @@
+.notification-host {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: auto;
+  position: fixed;
+  z-index: 99999999;
+  top: 2rem;
+  right: 1rem;
+}
+
+.notification-item {
+  display: block;
+  width: auto;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease;
+  animation-fill-mode: forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease;
+  animation-fill-mode: forwards;
+}
+
+.notification-alert {
+  max-width: 200px;
+  padding: 6px 12px;
+  max-height: 83px;
+  overflow: hidden;
+  background-color: #45a676;
+  border-radius: 7px;
+  color: white;
+  border: 2px solid white;
+}
+
+@media only screen and (max-width: 600px) {
+  .notification-host {
+    top: 7rem;
+    left: inherit;
+    right: 1.25rem;
+    max-width: 16.75rem;
+  }
+}

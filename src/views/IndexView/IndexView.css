@@ -1,0 +1,89 @@
+.indicator {
+  margin-left: 20px;
+  display: inline-block;
+  align-items: center;
+  top: -6px;
+  position: relative;
+}
+
+.indicator .ads-counter {
+  height: 23px;
+  width: 23px;
+  background: #8FDACB;
+  line-height: 23px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 16px;
+  margin-right: 7px;
+  display: inline-block;
+}
+
+.indicator .text {
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.box-column {
+  display: table-cell;
+}
+
+.box-right-column {
+  padding: 0 0 0 30px;
+}
+
+.box-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.box-name {
+  font-size: 30px;
+  font-weight: 400;
+  color: #333;
+  text-decoration: none;
+}
+
+.box-name:hover {
+  color: black;
+}
+
+.box-price {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  margin: 10px 0;
+}
+
+.box-description {
+  font-size: 18px;
+  color: #333;
+}
+
+.box-content {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 600px) {
+  .box-right-column {
+    padding: 0;
+  }
+
+  .indicator {
+    margin-left: 0;
+    display: block;
+    align-items: center;
+    top: 0;
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .box-content {
+    display: flex;
+    flex-direction: column;
+  }
+}

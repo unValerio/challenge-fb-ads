@@ -1,0 +1,16 @@
+.main-content {
+  position: relative;
+  padding-top: 104px;
+}
+
+.box-wrapper {
+  width: 100%;
+  padding: 0 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .box-wrapper {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
